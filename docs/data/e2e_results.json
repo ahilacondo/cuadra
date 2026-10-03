@@ -1,0 +1,122 @@
+[
+ {
+  "id": "CP01",
+  "desc": "Estado vacío inicial con llamadas a la acción",
+  "ok": true,
+  "s": 0.46
+ },
+ {
+  "id": "CP02",
+  "desc": "Validación al crear grupo sin nombre ni integrantes",
+  "ok": true,
+  "s": 0.94
+ },
+ {
+  "id": "CP03",
+  "desc": "Crear grupo con nombre, ícono y 3 integrantes",
+  "ok": true,
+  "s": 1.73
+ },
+ {
+  "id": "CP04",
+  "desc": "Gasto con reparto igual: 100.00 entre 3 cuadra al céntimo",
+  "ok": true,
+  "s": 1.89
+ },
+ {
+  "id": "CP05",
+  "desc": "Montos exactos que no cuadran bloquean el guardado",
+  "ok": true,
+  "s": 2.32
+ },
+ {
+  "id": "CP06",
+  "desc": "Porcentajes que no suman 100 % muestran el error y se corrigen",
+  "ok": true,
+  "s": 1.87
+ },
+ {
+  "id": "CP07",
+  "desc": "Reparto por partes (2 : 1 : 1) y participante excluido",
+  "ok": true,
+  "s": 2.35
+ },
+ {
+  "id": "CP08",
+  "desc": "Saldos del grupo suman cero y se listan todos los integrantes",
+  "ok": true,
+  "s": 0.87
+ },
+ {
+  "id": "CP09",
+  "desc": "Persistencia: los datos sobreviven a recargar la página",
+  "ok": true,
+  "s": 2.35
+ },
+ {
+  "id": "CP10",
+  "desc": "Eliminar un gasto requiere confirmación (doble toque)",
+  "ok": true,
+  "s": 1.22
+ },
+ {
+  "id": "CP11",
+  "desc": "Grupo de ejemplo: tarjeta de saldo y lista de gastos",
+  "ok": true,
+  "s": 0.44
+ },
+ {
+  "id": "CP12",
+  "desc": "Saldos de ejemplo: Camila +811.72 (acreedora) y suma cero",
+  "ok": true,
+  "s": 0.87
+ },
+ {
+  "id": "CP13",
+  "desc": "Liquidación: 6 pagos sin simplificar frente a 3 con Cuadra",
+  "ok": true,
+  "s": 1.0
+ },
+ {
+  "id": "CP14",
+  "desc": "Copiar resumen al portapapeles",
+  "ok": true,
+  "s": 0.88
+ },
+ {
+  "id": "CP15",
+  "desc": "Registrar un pago actualiza saldos y reduce los pagos pendientes",
+  "ok": true,
+  "s": 0.98
+ },
+ {
+  "id": "CP16",
+  "desc": "Liquidar todo: el grupo queda \"al día\"",
+  "ok": true,
+  "s": 2.18
+ },
+ {
+  "id": "CP17",
+  "desc": "Resumen: gasto por categoría y pagado vs. le corresponde",
+  "ok": true,
+  "s": 0.98
+ },
+ {
+  "id": "CP18",
+  "desc": "Diseño responsive: columna centrada en pantalla de escritorio",
+  "ok": true,
+  "s": 0.98
+ },
+ {
+  "id": "CP19",
+  "desc": "Ruta inexistente: grupo no encontrado con salida de emergencia",
+  "ok": true,
+  "s": 1.37
+ },
+ {
+  "id": "CP20",
+  "desc": "Sin errores de consola durante todo el recorrido",
+  "ok": true,
+  "s": 0.0
+ }
+]

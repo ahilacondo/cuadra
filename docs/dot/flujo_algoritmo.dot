@@ -1,0 +1,14 @@
+digraph G { rankdir=TB; nodesep=0.35; ranksep=0.4; graph [fontname="Inter", bgcolor="white", pad=0.25, dpi=200]; node [fontname="Inter", fontsize=11, shape=box, style="rounded,filled", fillcolor="#F7F3EC", color="#9AA6A0", penwidth=1.3, margin="0.18,0.10"]; edge [fontname="Inter", fontsize=9.5, color="#5B6B64", arrowsize=0.8, penwidth=1.3];
+ a [label="Gastos y pagos registrados\n(monto, pagador, reparto)", fillcolor="#DDEFE7", color="#1E6B52"];
+ b [label="Saldo neto por persona\nsaldo = pagado − le corresponde\n(+ pagos ya registrados)", fillcolor="#DDEFE7", color="#1E6B52"];
+ c [label="Invariante: Σ saldos = 0", shape=note, fillcolor="#FCF0D5", color="#D68A1C"];
+ d [label="Quitar saldos = 0\nk = personas con saldo ≠ 0", fillcolor="#F7F3EC"];
+ q [label="¿k ≤ 16?", shape=diamond, style="filled", fillcolor="#FBE3DA", color="#E4572E", margin="0.05,0.05"];
+ o [label="Búsqueda exacta (DP sobre subconjuntos)\nmáx. nº de subgrupos de saldo 0  →  mín. pagos = k − G", fillcolor="#EEF1FA", color="#3B6FB6"];
+ g0 [label="Heurística codiciosa\n(mayor deudor paga al mayor acreedor)", fillcolor="#EEF1FA", color="#3B6FB6"];
+ g [label="Dentro de cada subgrupo:\nCodicioso ⇒ exactamente (tamaño − 1) pagos", fillcolor="#EEF1FA", color="#3B6FB6"];
+ r [label="Lista de transferencias\n«A paga S/ x a B»", fillcolor="#DDEFE7", color="#1E6B52"];
+ v [label="Registrar pago ⇒ nuevo Settlement\n⇒ se recalculan los saldos", fillcolor="#FCF0D5", color="#D68A1C"];
+ a -> b -> d; b -> c [style=dotted, arrowhead=none]; d -> q;
+ q -> o [label="sí"]; q -> g0 [label="no"]; o -> g; g -> r; g0 -> r; r -> v; v -> b [style=dashed, constraint=false];
+}

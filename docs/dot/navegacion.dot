@@ -1,0 +1,10 @@
+digraph G { rankdir=LR; nodesep=0.35; ranksep=0.6; graph [fontname="Inter", bgcolor="white", pad=0.25, dpi=200]; node [fontname="Inter", fontsize=11, shape=box, style="rounded,filled", fillcolor="#F7F3EC", color="#9AA6A0", penwidth=1.3, margin="0.18,0.10"]; edge [fontname="Inter", fontsize=9.5, color="#5B6B64", arrowsize=0.8, penwidth=1.3];
+ h [label="Inicio\n(Mis grupos)", fillcolor="#DDEFE7", color="#1E6B52"];
+ n [label="Nuevo grupo"]; 
+ g [label="Detalle del grupo", fillcolor="#DDEFE7", color="#1E6B52"];
+ e [label="Nuevo / editar gasto"];
+ subgraph cluster_tabs { label="Pestañas internas"; style="rounded,dashed"; color="#9AA6A0"; fontsize=10.5;
+  t1 [label="Gastos"]; t2 [label="Saldos"]; t3 [label="Liquidar"]; t4 [label="Resumen"]; }
+ h -> n [label="Nuevo grupo"]; n -> g [label="Crear"]; h -> g [label="Tocar grupo\n o demo"]; g -> e [label="Añadir / tocar gasto"]; e -> g [label="Guardar"]; g -> h [label="Volver / eliminar"];
+ g -> t1 [style=dotted]; g -> t2 [style=dotted]; g -> t3 [style=dotted]; g -> t4 [style=dotted];
+}

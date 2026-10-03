@@ -1,0 +1,40 @@
+{
+ "weights": {
+  "Frecuencia": 0.2063,
+  "Viabilidad": 0.3689,
+  "Evidencia": 0.1093,
+  "Impacto": 0.2063,
+  "Valor": 0.1093
+ },
+ "lam": 5.013262878435867,
+ "CI": 0.003315719608966816,
+ "CR": 0.0029604639365775143,
+ "score": {
+  "Gastos compartidos": 4.587,
+  "Entregas y labs acad\u00e9micos": 4.26,
+  "Men\u00fa del d\u00eda cerca del campus": 2.878,
+  "Transporte urbano en Arequipa": 3.031,
+  "Cortes de agua (SEDAPAR)": 2.303
+ },
+ "p1_dirichlet": {
+  "Gastos compartidos": 0.869,
+  "Entregas y labs acad\u00e9micos": 0.123,
+  "Men\u00fa del d\u00eda cerca del campus": 0.0,
+  "Transporte urbano en Arequipa": 0.007,
+  "Cortes de agua (SEDAPAR)": 0.0
+ },
+ "meanrank": {
+  "Gastos compartidos": 1.14,
+  "Entregas y labs acad\u00e9micos": 2.0,
+  "Men\u00fa del d\u00eda cerca del campus": 4.0,
+  "Transporte urbano en Arequipa": 3.04,
+  "Cortes de agua (SEDAPAR)": 4.82
+ },
+ "p1_noise": {
+  "Gastos compartidos": 0.839,
+  "Entregas y labs acad\u00e9micos": 0.161,
+  "Men\u00fa del d\u00eda cerca del campus": 0.0,
+  "Transporte urbano en Arequipa": 0.0,
+  "Cortes de agua (SEDAPAR)": 0.0
+ }
+}

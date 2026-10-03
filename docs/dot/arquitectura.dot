@@ -1,0 +1,15 @@
+digraph G { rankdir=TB; nodesep=0.3; ranksep=0.5; compound=true; newrank=true; graph [fontname="Inter", bgcolor="white", pad=0.25, dpi=200]; node [fontname="Inter", fontsize=12, shape=box, style="rounded,filled", fillcolor="#F7F3EC", color="#9AA6A0", penwidth=1.3, margin="0.18,0.10"]; edge [fontname="Inter", fontsize=10.5, color="#5B6B64", arrowsize=0.8, penwidth=1.3];
+ subgraph cluster_ui { label="Presentación (Expo Router + React Native)"; labeljust=l; fontsize=13; style="rounded,filled"; fillcolor="#EEF6F2"; color="#1E6B52";
+  home [label="index\nMis grupos"]; newg [label="group/new\nNuevo grupo"]; grp [label="group/[id]\nGastos · Saldos\nLiquidar · Resumen"]; exp [label="group/[id]/expense\nNuevo / editar gasto"]; kit [label="ui/kit\nButton · Card · Chip\nSegmented · Field", fillcolor="#FCF0D5", color="#D68A1C"]; }
+ subgraph cluster_st { label="Estado"; labeljust=l; fontsize=13; style="rounded,filled"; fillcolor="#FDF3EE"; color="#E4572E";
+  store [label="StoreProvider (React Context)\ncreateGroup · saveExpense\naddSettlement · loadDemo"]; }
+ subgraph cluster_core { label="Núcleo de dominio (TypeScript puro)"; labeljust=l; fontsize=13; style="rounded,filled"; fillcolor="#EEF1FA"; color="#3B6FB6";
+  split [label="split.ts\nReparto (mayor resto)"]; bal [label="balances.ts\nSaldos netos"]; settle [label="settle.ts\nSin simplificar · Codicioso\nÓptimo (DP)"]; money [label="money.ts\nParseo y formato S/"]; }
+ subgraph cluster_px { label="Persistencia"; labeljust=l; fontsize=13; style="rounded,filled"; fillcolor="#F4F1F8"; color="#8A5CC2";
+  as [label="AsyncStorage\n(localStorage en web)"]; }
+ {rank=same; home; newg; grp; exp; kit}
+ grp -> store [ltail=cluster_ui, lhead=cluster_st, label="  acciones / estado"];
+ grp -> bal [ltail=cluster_ui, lhead=cluster_core, label="  cálculo"];
+ store -> as [label="  JSON"];
+ {rank=same; split; bal; settle; money}
+}

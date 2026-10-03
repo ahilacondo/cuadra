@@ -1,0 +1,18 @@
+digraph G { rankdir=TB; nodesep=0.9; ranksep=0.42; newrank=true; graph [fontname="Inter", bgcolor="white", pad=0.25, dpi=200]; node [fontname="Inter", fontsize=12, shape=box, style="rounded,filled", fillcolor="#F7F3EC", color="#9AA6A0", penwidth=1.3, margin="0.18,0.10"]; edge [fontname="Inter", fontsize=10.5, color="#5B6B64", arrowsize=0.8, penwidth=1.3];
+ subgraph cluster_dt { label="Design Thinking (fases)"; labeljust=l; fontsize=13; style="rounded,dashed"; color="#9AA6A0";
+  e [label=<<b>1. Empatizar</b><br/>Contexto y datos públicos · Proto-persona (hipótesis)>, fillcolor="#DDEFE7", color="#1E6B52"];
+  d [label=<<b>2. Definir</b><br/>Candidatos de problema · Matriz AHP + sensibilidad<br/>Enunciado «¿Cómo podríamos…?»>, fillcolor="#DDEFE7", color="#1E6B52"];
+  i [label=<<b>3. Idear</b><br/>Historias de usuario (MoSCoW) · Comparativa de herramientas<br/>Diseño del algoritmo de liquidación>, fillcolor="#DDEFE7", color="#1E6B52"];
+  p [label=<<b>4. Prototipar</b><br/>Wireframes anotados · Sistema de diseño<br/>App React Native (Expo)>, fillcolor="#DDEFE7", color="#1E6B52"];
+  t [label=<<b>5. Probar</b><br/>Pruebas unitarias (Vitest) · Simulación Monte Carlo<br/>E2E (Playwright) · Heurísticas de Nielsen>, fillcolor="#DDEFE7", color="#1E6B52"];
+  e -> d -> i -> p -> t;
+  t -> d [label="iterar", style=dashed, constraint=false, color="#E4572E", fontcolor="#E4572E"];
+ }
+ subgraph cluster_sc { label="Scrum ligero"; labeljust=l; fontsize=13; style="rounded,dashed"; color="#9AA6A0";
+  s1 [label=<<b>Incremento 1</b><br/>Núcleo de cálculo<br/>+ pruebas unitarias>, fillcolor="#FCF0D5", color="#D68A1C"];
+  s2 [label=<<b>Incremento 2</b><br/>Pantallas y<br/>persistencia local>, fillcolor="#FCF0D5", color="#D68A1C"];
+  s3 [label=<<b>Incremento 3</b><br/>Liquidación, resumen<br/>y pruebas E2E>, fillcolor="#FCF0D5", color="#D68A1C"];
+  s1 -> s2 -> s3;
+ }
+ i -> s1 [style=dotted, arrowhead=none]; p -> s2 [style=dotted, arrowhead=none]; t -> s3 [style=dotted, arrowhead=none];
+}
